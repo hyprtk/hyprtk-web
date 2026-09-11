@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hyprtk-bar — a modular pywal-themed taskbar for Hyprland</title>
+<meta name="description" content="hyprtk-bar is a feature-complete taskbar for Hyprland — GTK3 + layer-shell, themed live from pywal16. Start menu, arc menu, notification center, system tray and more.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="mg">hypr</span>tk<span class="dot">.</span></div>
+  <div class="links">
+    <a href="index.html">home</a>
+    <a href="dotfiles.html">dotfiles</a>
+    <a href="bar.html" class="active">hyprtk-bar</a>
+    <a href="https://github.com/hyprtk/hyprtk-bar" class="gh-btn" target="_blank" rel="noopener">github</a>
+  </div>
+</nav>
+
+<section class="wrap page-hero">
+  <span class="eyebrow">taskbar · gtk3 + layer-shell</span>
+  <h1>hyprtk-<span class="cy">bar</span></h1>
+  <p>A modular, feature-complete taskbar for Hyprland. It hosts app launchers, workspaces, a task list, system monitoring, a system tray, quick settings and a built-in notification centre — all themed live from your pywal16 palette.</p>
+  <div class="actions">
+    <a href="#install" class="btn primary">install it</a>
+    <a href="https://github.com/hyprtk/hyprtk-bar" class="btn outline" target="_blank" rel="noopener">view on github</a>
+  </div>
+</section>
+
+<section class="wrap section" id="features">
+  <div class="section-head">
+    <span class="eyebrow">features</span>
+    <h2>everything in <span class="mg">one bar</span></h2>
+  </div>
+  <div class="grid feature-grid">
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <h4 class="mg">fully modular</h4>
+      <p>Arrange modules across left / center / right sections, show or hide them, reorder them — from the settings window, no config surgery.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6.5 7 6.5 12a6.5 6.5 0 1 1-13 0C5.5 9.5 12 2.5 12 2.5z"/><circle cx="12" cy="14.5" r="2"/></svg>
+      <h4 class="mg">live theming</h4>
+      <p>One wallpaper drives the whole palette via pywal16. The bar re-themes itself the moment the palette changes — zero restart.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+      <h4 class="mg">task list</h4>
+      <p>Pinned and running apps grouped by class, with a running/active indicator, hover previews, click to focus or minimize.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+      <h4 class="mg">notification centre</h4>
+      <p>A built-in <span class="mono" style="color:var(--cyan);">org.freedesktop.Notifications</span> daemon — toasts plus a centre panel with actions and clear-all. No separate daemon.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 8v6l-4 2v-8L4 5z"/></svg>
+      <h4 class="mg">system tray</h4>
+      <p>Full StatusNotifier support, including native <span class="mono" style="color:var(--cyan);">dbusmenu</span> menus rendered directly in the bar.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 12h16M4 16h16"/><circle cx="9" cy="8" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="7" cy="16" r="1.6"/></svg>
+      <h4 class="mg">quick settings</h4>
+      <p>Wi-Fi and Bluetooth toggles, a volume slider with mute, and a brightness slider — auto-hidden when no backlight exists.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+      <h4 class="mg">system monitor</h4>
+      <p>A Mission Center-style dialog — CPU, Memory, Disks, Network, GPU and Apps pages with live graphs and per-process kill/launch.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <h4 class="mg">start menu</h4>
+      <p>Search, category sidebar, favourites, recents and a power bar — in four layouts: whisker, win7, win11, plasma.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 5v-2M12 21v-2M5 12H3M21 12h-2M7 7L5.5 5.5M18.5 5.5L17 7M7 17l-1.5 1.5M18.5 18.5L17 17"/></svg>
+      <h4 class="mg">arc menu</h4>
+      <p>A radial launcher — a FAB in a screen corner fans out a ring of app shortcuts, Android Material style.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L14 10"/><path d="M15 4l1.5 4L21 9.5l-4.5 1.5L15 15l-1.5-4L9 9.5l4.5-1.5z"/></svg>
+      <h4 class="mg">theme manager</h4>
+      <p>Wallpapers, pywal palette, rofi variants, bar themes, matuwall, swaylock, icons and SDDM &amp; GRUB — one dialogue.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8 8h8"/></svg>
+      <h4 class="mg">multi-monitor</h4>
+      <p>One bar per monitor when configured, each with its own active workspace. Tray and notifications stay on the primary.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/></svg>
+      <h4 class="mg">clipboard manager</h4>
+      <p>In-bar history with list, copy, delete and wipe — replaces a separate cliphist script.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="modules">
+  <div class="section-head">
+    <h2>the <span class="cy">modules</span></h2>
+    <p>Every module is optional and positionable. The default arrangement puts launchers left, workspaces centre, status right.</p>
+  </div>
+  <div class="grid stack-grid">
+    <div class="stack"><div class="l">start button</div><div class="v cy">menu</div></div>
+    <div class="stack"><div class="l">quicklinks</div><div class="v cy">glyphs</div></div>
+    <div class="stack"><div class="l">workspaces</div><div class="v cy">chips</div></div>
+    <div class="stack"><div class="l">tasklist</div><div class="v cy">apps</div></div>
+    <div class="stack"><div class="l">window</div><div class="v cy">title</div></div>
+    <div class="stack"><div class="l">sysmon</div><div class="v cy">cpu·ram·disk</div></div>
+    <div class="stack"><div class="l">updates</div><div class="v cy">count</div></div>
+    <div class="stack"><div class="l">kbstate</div><div class="v cy">caps·num</div></div>
+    <div class="stack"><div class="l">clock</div><div class="v cy">time·date</div></div>
+    <div class="stack"><div class="l">notifications</div><div class="v cy">bell</div></div>
+    <div class="stack"><div class="l">tray</div><div class="v cy">sni</div></div>
+    <div class="stack"><div class="l">quicksettings</div><div class="v cy">flyout</div></div>
+  </div>
+</section>
+
+<section class="wrap section" id="gallery">
+  <div class="section-head">
+    <span class="eyebrow">gallery</span>
+    <h2>see it <span class="mg">in action</span></h2>
+    <p>Captured on a 3840×1080 Hyprland session, themed live from the pywal16 palette.</p>
+  </div>
+  <div class="grid gallery">
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/bar.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/bar.png" alt="The taskbar" loading="lazy"><div class="s-label">the taskbar</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/menu-whisker.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/menu-whisker.png" alt="Whisker menu" loading="lazy"><div class="s-label">start menu · whisker</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/menu-win7.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/menu-win7.png" alt="Windows 7 menu" loading="lazy"><div class="s-label">start menu · win7</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/menu-win11.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/menu-win11.png" alt="Windows 11 menu" loading="lazy"><div class="s-label">start menu · win11</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/menu-plasma.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/menu-plasma.png" alt="Plasma menu" loading="lazy"><div class="s-label">start menu · plasma</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/arc-menu.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/arc-menu.png" alt="Arc menu" loading="lazy"><div class="s-label">arc menu</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/quick-settings.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/quick-settings.png" alt="Quick settings" loading="lazy"><div class="s-label">quick settings</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/system-monitor.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/system-monitor.png" alt="System monitor" loading="lazy"><div class="s-label">system monitor</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/theme-manager.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/theme-manager.png" alt="Theme manager" loading="lazy"><div class="s-label">theme manager</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/settings.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/settings.png" alt="Settings window" loading="lazy"><div class="s-label">settings</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/notification-toast.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/notification-toast.png" alt="Notification toast" loading="lazy"><div class="s-label">notification toast</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/notification-center.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/notification-center.png" alt="Notification center" loading="lazy"><div class="s-label">notification centre</div></a>
+    <a class="shot" href="https://github.com/hyprtk/hyprtk-bar/blob/main/assets/screenshots/calendar.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/hyprtk-bar/raw/main/assets/screenshots/calendar.png" alt="Calendar" loading="lazy"><div class="s-label">calendar</div></a>
+  </div>
+</section>
+
+<section class="wrap section" id="install">
+  <div class="section-head" style="max-width:640px;margin-left:auto;margin-right:auto;text-align:center;">
+    <h2>install</h2>
+    <p>The installer detects your package manager and installs the GTK3 / layer-shell typelibs, a virtualenv, and the launcher.</p>
+  </div>
+  <div class="install-box">
+    <p>standalone — any Hyprland</p>
+    <code><span class="p">$</span> git clone <span class="arg">https://github.com/hyprtk/hyprtk-bar.git</span> &amp;&amp; cd hyprtk-bar &amp;&amp; ./install.sh</code>
+  </div>
+  <div class="install-footer">config lives in <span class="mono">~/.config/hyprtk-bar/config.json</span> — it ships with the dots too</div>
+</section>
+
+<footer>
+  <div class="foot-links">
+    <a href="index.html">home</a>
+    <a href="dotfiles.html">dotfiles</a>
+    <a href="https://github.com/hyprtk/hyprtk-bar" target="_blank" rel="noopener">github.com/hyprtk/hyprtk-bar</a>
+  </div>
+  <div>hyprtk — gpl-2.0</div>
+</footer>
+
+</body>
+</html>

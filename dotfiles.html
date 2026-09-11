@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hyprtk dotfiles — a themed Hyprland desktop for 11 distros</title>
+<meta name="description" content="hyprtk dotfiles: one installer for a fully themed Hyprland desktop on any Arch-based distro, with pywal16 theming and an XFCE safety net.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="mg">hypr</span>tk<span class="dot">.</span></div>
+  <div class="links">
+    <a href="index.html">home</a>
+    <a href="dotfiles.html" class="active">dotfiles</a>
+    <a href="bar.html">hyprtk-bar</a>
+    <a href="https://github.com/hyprtk/dotfiles" class="gh-btn" target="_blank" rel="noopener">github</a>
+  </div>
+</nav>
+
+<section class="wrap page-hero">
+  <span class="eyebrow">dotfiles · 11 distros</span>
+  <h1>one installer, a whole <span class="mg">hyprland</span> desktop</h1>
+  <p>A curated configuration that replaces the default Arch look with a polished Hyprland setup. One wallpaper drives every colour on screen via pywal16 — with XFCE kept installed as a safety net.</p>
+  <div class="actions">
+    <a href="#install" class="btn primary">install it</a>
+    <a href="https://github.com/hyprtk/dotfiles" class="btn outline" target="_blank" rel="noopener">view on github</a>
+  </div>
+</section>
+
+<section class="wrap section" id="features">
+  <div class="section-head">
+    <span class="eyebrow">features</span>
+    <h2>what you <span class="mg">get</span></h2>
+  </div>
+  <div class="grid feature-grid">
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6.5 7 6.5 12a6.5 6.5 0 1 1-13 0C5.5 9.5 12 2.5 12 2.5z"/><circle cx="12" cy="14.5" r="2"/></svg>
+      <h4 class="mg">pywal16 theming</h4>
+      <p>Dynamic colour scheme generated from your wallpaper. Terminal, bar, rofi, icons — everything updates in sync.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+      <h4 class="mg">one-command installer</h4>
+      <p>A guided gum TUI auto-detects your distro, then installs package groups, dotfiles and services.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <h4 class="mg">modular lua config</h4>
+      <p>Hyprland config split into 18 Lua files — keybindings, monitors, window rules, animations, decorations.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M3 17l5-5 4 4 3-3 6 6"/></svg>
+      <h4 class="mg">wallpaper tools</h4>
+      <p>Random change, a rofi picker and the matuwall film-strip viewer. pywal16 applies colours instantly.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 10h6M9 14h6"/></svg>
+      <h4 class="mg">clipboard &amp; screenshots</h4>
+      <p>cliphist for clipboard history, grim + slurp + swappy for region screenshots, wf-recorder for capture.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <h4 class="mg">lock &amp; session</h4>
+      <p>swaylock-effects with blur, hyprlogout power menu, SDDM login manager — all pre-themed.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+      <h4 class="mg">nvidia &amp; amd support</h4>
+      <p>Dedicated <code>nvidia.lua</code> with environment variables and DRM handling. AMDGPU setup included.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-2"/><path d="M9 12h6"/></svg>
+      <h4 class="mg">utility scripts</h4>
+      <p>Wallpaper, volume, brightness, recording, clipboard, font search, snapper, QEMU/virt and more.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg>
+      <h4 class="mg">xfce fallback</h4>
+      <p>Wayland-first, but XFCE stays installed as a safety net — a familiar desktop if Hyprland misbehaves.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="stack">
+  <div class="section-head">
+    <h2>the <span class="cy">stack</span></h2>
+  </div>
+  <div class="grid stack-grid">
+    <div class="stack"><div class="l">compositor</div><div class="v cy">hyprland</div></div>
+    <div class="stack"><div class="l">status bar</div><div class="v cy">hyprtk-bar</div></div>
+    <div class="stack"><div class="l">terminal</div><div class="v cy">alacritty</div></div>
+    <div class="stack"><div class="l">editor</div><div class="v cy">neovim</div></div>
+    <div class="stack"><div class="l">prompt</div><div class="v cy">starship</div></div>
+    <div class="stack"><div class="l">launcher</div><div class="v cy">rofi</div></div>
+    <div class="stack"><div class="l">colours</div><div class="v cy">pywal16</div></div>
+    <div class="stack"><div class="l">files</div><div class="v cy">thunar</div></div>
+    <div class="stack"><div class="l">browser</div><div class="v cy">brave / chromium</div></div>
+    <div class="stack"><div class="l">notifications</div><div class="v cy">hyprtk-bar</div></div>
+    <div class="stack"><div class="l">display manager</div><div class="v cy">sddm</div></div>
+    <div class="stack"><div class="l">lock screen</div><div class="v cy">swaylock</div></div>
+    <div class="stack"><div class="l">icons</div><div class="v cy">papirus</div></div>
+    <div class="stack"><div class="l">cursor</div><div class="v cy">bibata</div></div>
+    <div class="stack"><div class="l">shell</div><div class="v cy">zsh + omz</div></div>
+    <div class="stack"><div class="l">screenshots</div><div class="v cy">grim + slurp</div></div>
+    <div class="stack"><div class="l">clipboard</div><div class="v cy">cliphist</div></div>
+    <div class="stack"><div class="l">capture</div><div class="v cy">wf-recorder</div></div>
+    <div class="stack"><div class="l">bootloader</div><div class="v cy">grub</div></div>
+    <div class="stack"><div class="l">fallback de</div><div class="v cy">xfce</div></div>
+  </div>
+</section>
+
+<section class="wrap section" id="install">
+  <div class="section-head" style="max-width:640px;margin-left:auto;margin-right:auto;text-align:center;">
+    <h2>install</h2>
+    <p>Back up your existing <code class="mono" style="color:var(--cyan);font-size:0.85rem;">~/.config</code> first. The installer walks you through package groups, dotfiles and services.</p>
+  </div>
+  <div class="install-box">
+    <p>clone &amp; run — distro auto-detected</p>
+    <code><span class="p">$</span> git clone <span class="arg">https://github.com/hyprtk/dotfiles.git ~/hyprtk</span> &amp;&amp; cd ~/hyprtk &amp;&amp; sh ./1-install.sh</code>
+  </div>
+</section>
+
+<section class="wrap section" id="keybinds">
+  <div class="section-head">
+    <span class="eyebrow">keybindings</span>
+    <h2>drive it with <span class="mg">keys</span></h2>
+    <p><span class="mono" style="color:var(--cyan);">Super</span> = the Windows key.</p>
+  </div>
+  <div class="grid kb-grid">
+    <div class="kb">
+      <h3>apps &amp; windows</h3>
+      <table>
+        <tr><td>Super + Return</td><td>Terminal (Alacritty)</td></tr>
+        <tr><td>Super + Space</td><td>Start menu (in-bar)</td></tr>
+        <tr><td>Super + Q</td><td>Close window</td></tr>
+        <tr><td>Super + D</td><td>App menu (rofi)</td></tr>
+        <tr><td>Super + F</td><td>File manager (Thunar)</td></tr>
+        <tr><td>Super + B</td><td>Brave browser</td></tr>
+        <tr><td>Super + Ctrl + B</td><td>Chromium</td></tr>
+        <tr><td>Super + X</td><td>Exit session</td></tr>
+        <tr><td>Super + M</td><td>Toggle fullscreen</td></tr>
+        <tr><td>Super + V</td><td>Float / resize / center</td></tr>
+        <tr><td>Super + J / K</td><td>Toggle / swap split</td></tr>
+      </table>
+    </div>
+    <div class="kb">
+      <h3>workspaces</h3>
+      <table>
+        <tr><td>Super + 1..0</td><td>Switch to workspace</td></tr>
+        <tr><td>Super + Shift + 1..0</td><td>Move window to workspace</td></tr>
+        <tr><td>Super + arrows</td><td>Focus window</td></tr>
+        <tr><td>Super + Shift + arrows</td><td>Resize window</td></tr>
+        <tr><td>Super + Scroll</td><td>Cycle workspaces</td></tr>
+        <tr><td>Super + LMB / RMB</td><td>Move / resize window</td></tr>
+      </table>
+      <hr class="hsep">
+      <h3>wallpaper &amp; menus</h3>
+      <table>
+        <tr><td>Super + W</td><td>Matuwall picker</td></tr>
+        <tr><td>Super + Shift + W</td><td>Random wallpaper</td></tr>
+        <tr><td>Super + Ctrl + W</td><td>Wallpaper list (rofi)</td></tr>
+        <tr><td>Super + Ctrl + M</td><td>Arc menu</td></tr>
+        <tr><td>Super + Ctrl + C</td><td>Clipboard history</td></tr>
+      </table>
+    </div>
+    <div class="kb">
+      <h3>media &amp; system</h3>
+      <table>
+        <tr><td>Super + Print / P</td><td>Screenshot</td></tr>
+        <tr><td>Super + Shift + Print</td><td>Start screen recording</td></tr>
+        <tr><td>Super + Alt + Print</td><td>Stop screen recording</td></tr>
+        <tr><td>Super + C</td><td>Color picker (hyprpicker)</td></tr>
+        <tr><td>Super + Ctrl + Q</td><td>Power menu (hyprlogout)</td></tr>
+        <tr><td>Super + R</td><td>Reload Hyprland config</td></tr>
+        <tr><td>Super + Ctrl + U</td><td>Volume control</td></tr>
+        <tr><td>Super + Ctrl + P</td><td>Package manager</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="gallery">
+  <div class="section-head">
+    <span class="eyebrow">gallery</span>
+    <h2>every <span class="cy">distro</span></h2>
+    <p>Three screenshots per distro. Click any image to view full size on GitHub.</p>
+  </div>
+  <div class="grid gallery">
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/arch1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/arch1.png" alt="Arch Linux" loading="lazy"><div class="s-label">arch</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/arch2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/arch2.png" alt="Arch Linux" loading="lazy"><div class="s-label">arch</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/arch3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/arch3.png" alt="Arch Linux" loading="lazy"><div class="s-label">arch</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archbang1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archbang1.png" alt="ArchBANG" loading="lazy"><div class="s-label">archbang</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archbang2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archbang2.png" alt="ArchBANG" loading="lazy"><div class="s-label">archbang</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archbang3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archbang3.png" alt="ArchBANG" loading="lazy"><div class="s-label">archbang</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archcraft1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archcraft1.png" alt="Archcraft" loading="lazy"><div class="s-label">archcraft</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archcraft2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archcraft2.png" alt="Archcraft" loading="lazy"><div class="s-label">archcraft</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archcraft3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archcraft3.png" alt="Archcraft" loading="lazy"><div class="s-label">archcraft</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archman1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archman1.png" alt="Archman" loading="lazy"><div class="s-label">archman</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archman2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archman2.png" alt="Archman" loading="lazy"><div class="s-label">archman</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/archman3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/archman3.png" alt="Archman" loading="lazy"><div class="s-label">archman</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/bslx1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/bslx1.png" alt="BlueStar" loading="lazy"><div class="s-label">bluestar</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/bslx2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/bslx2.png" alt="BlueStar" loading="lazy"><div class="s-label">bluestar</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/bslx3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/bslx3.png" alt="BlueStar" loading="lazy"><div class="s-label">bluestar</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/cachy1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/cachy1.png" alt="CachyOS" loading="lazy"><div class="s-label">cachyos</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/cachy2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/cachy2.png" alt="CachyOS" loading="lazy"><div class="s-label">cachyos</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/cachy3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/cachy3.png" alt="CachyOS" loading="lazy"><div class="s-label">cachyos</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/endeavour1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/endeavour1.png" alt="EndeavourOS" loading="lazy"><div class="s-label">endeavouros</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/endeavour2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/endeavour2.png" alt="EndeavourOS" loading="lazy"><div class="s-label">endeavouros</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/endeavour3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/endeavour3.png" alt="EndeavourOS" loading="lazy"><div class="s-label">endeavouros</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/garuda1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/garuda1.png" alt="Garuda" loading="lazy"><div class="s-label">garuda</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/garuda2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/garuda2.png" alt="Garuda" loading="lazy"><div class="s-label">garuda</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/garuda3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/garuda3.png" alt="Garuda" loading="lazy"><div class="s-label">garuda</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/kiro1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/kiro1.png" alt="Kiro" loading="lazy"><div class="s-label">kiro</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/kiro2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/kiro2.png" alt="Kiro" loading="lazy"><div class="s-label">kiro</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/kiro3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/kiro3.png" alt="Kiro" loading="lazy"><div class="s-label">kiro</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/manjaro1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/manjaro1.png" alt="Manjaro" loading="lazy"><div class="s-label">manjaro</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/manjaro2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/manjaro2.png" alt="Manjaro" loading="lazy"><div class="s-label">manjaro</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/manjaro3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/manjaro3.png" alt="Manjaro" loading="lazy"><div class="s-label">manjaro</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/reborn1.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/reborn1.png" alt="RebornOS" loading="lazy"><div class="s-label">rebornos</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/reborn2.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/reborn2.png" alt="RebornOS" loading="lazy"><div class="s-label">rebornos</div></a>
+    <a class="shot" href="https://github.com/hyprtk/dotfiles/blob/main/assets/screenshots/reborn3.png" target="_blank" rel="noopener"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/screenshots/reborn3.png" alt="RebornOS" loading="lazy"><div class="s-label">rebornos</div></a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-links">
+    <a href="index.html">home</a>
+    <a href="bar.html">hyprtk-bar</a>
+    <a href="https://github.com/hyprtk/dotfiles" target="_blank" rel="noopener">github.com/hyprtk/dotfiles</a>
+  </div>
+  <div>hyprtk — gpl-2.0</div>
+</footer>
+
+</body>
+</html>

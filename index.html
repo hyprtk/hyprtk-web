@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hyprtk — a complete Hyprland desktop</title>
+<meta name="description" content="hyprtk dotfiles and hyprtk-bar: a single installer for a fully themed Hyprland desktop on 11 Arch-based distros, plus a modular pywal-themed taskbar.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="mg">hypr</span>tk<span class="dot">.</span></div>
+  <div class="links">
+    <a href="index.html" class="active">home</a>
+    <a href="dotfiles.html">dotfiles</a>
+    <a href="bar.html">hyprtk-bar</a>
+    <a href="#install" class="hide-sm">install</a>
+    <a href="https://github.com/hyprtk/dotfiles" class="gh-btn" target="_blank" rel="noopener">github</a>
+  </div>
+</nav>
+
+<section class="wrap hero">
+  <div>
+    <span class="eyebrow">hyprland · wayland · open source</span>
+    <h1>a complete<br><span class="mg">hyprland</span> desktop</h1>
+    <p class="sub">One installer themes your whole desktop from a single wallpaper — and one taskbar ties it together. 11 distros, live pywal16 colours, a built-in start menu and notification centre.</p>
+    <div class="actions">
+      <a href="dotfiles.html" class="btn primary">explore the dots</a>
+      <a href="bar.html" class="btn outline">hyprtk-bar</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num mg">11</div><div class="label">distros</div></div>
+      <div class="stat"><div class="num mg">1</div><div class="label">installer</div></div>
+      <div class="stat"><div class="num mg">16</div><div class="label">bar modules</div></div>
+      <div class="stat"><div class="num mg">pywal16</div><div class="label">live theming</div></div>
+    </div>
+  </div>
+
+  <div class="term">
+    <div class="bar"><i></i><i></i><i></i><span class="t">hyprtk — zsh</span></div>
+    <div class="body">
+      <span class="p">$</span> <span class="cmd">git clone</span> <span class="arg">https://github.com/hyprtk/dotfiles.git ~/hyprtk</span><br>
+      <span class="p">$</span> <span class="cmd">sh</span> <span class="arg">~/hyprtk/1-install.sh</span><br>
+      <span class="ok">✓</span> <span class="dim">distro detected</span> <span class="arg">arch</span><br>
+      <span class="ok">✓</span> <span class="dim">pywal16 palette generated</span><br>
+      <span class="ok">✓</span> <span class="dim">hyprtk-bar autostarted</span><br>
+      <span class="ok">✓</span> <span class="dim">desktop ready</span>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="projects">
+  <div class="section-head">
+    <span class="eyebrow">two projects</span>
+    <h2>the dots <span class="mg">and</span> the bar</h2>
+    <p>hyprtk is a pair of projects that share one theme engine. The dotfiles install and theme everything; hyprtk-bar is the taskbar that lives on top of it.</p>
+  </div>
+  <div class="grid project-grid">
+    <div class="project-card">
+      <div class="tag">dotfiles</div>
+      <h3>hyprtk <span class="mg">dots</span></h3>
+      <p>A single installer for a fully themed Hyprland desktop on any Arch-based distro — with XFCE kept as a safety net.</p>
+      <ul>
+        <li>11 distros, one guided gum installer</li>
+        <li>pywal16 — one wallpaper drives every colour</li>
+        <li>Hyprland config in modular Lua</li>
+        <li>rofi, swaylock, SDDM, Papirus &amp; more, pre-themed</li>
+      </ul>
+      <div class="cta-row">
+        <a href="dotfiles.html" class="link">full breakdown →</a>
+        <a href="https://github.com/hyprtk/dotfiles" class="link" target="_blank" rel="noopener">repo</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="tag">taskbar</div>
+      <h3>hyprtk-<span class="cy">bar</span></h3>
+      <p>A modular, feature-complete taskbar for Hyprland — GTK3 + layer-shell, themed live from your pywal16 palette.</p>
+      <ul>
+        <li>Start menu, arc menu, task list &amp; workspaces</li>
+        <li>Built-in notification daemon &amp; system tray</li>
+        <li>Quick settings, system monitor, theme manager</li>
+        <li>Re-themes instantly on wallpaper change</li>
+      </ul>
+      <div class="cta-row">
+        <a href="bar.html" class="link">full breakdown →</a>
+        <a href="https://github.com/hyprtk/hyprtk-bar" class="link" target="_blank" rel="noopener">repo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="distros">
+  <div class="section-head">
+    <h2>supported <span class="mg">distributions</span></h2>
+    <p>The installer auto-detects your distro and applies the right tweaks. Every one of these is a first-class target.</p>
+  </div>
+  <div class="grid distro-grid">
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/arch1-thumb.png" alt="Arch Linux" loading="lazy"><div class="name">Arch Linux</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/archbang1-thumb.png" alt="ArchBANG" loading="lazy"><div class="name">ArchBANG</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/archcraft1-thumb.png" alt="Archcraft" loading="lazy"><div class="name">Archcraft</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/archman1-thumb.png" alt="Archman" loading="lazy"><div class="name">Archman</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/bslx1-thumb.png" alt="BlueStar" loading="lazy"><div class="name">BlueStar</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/cachy1-thumb.png" alt="CachyOS" loading="lazy"><div class="name">CachyOS</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/endeavour1-thumb.png" alt="EndeavourOS" loading="lazy"><div class="name">EndeavourOS</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/garuda1-thumb.png" alt="Garuda" loading="lazy"><div class="name">Garuda</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/kiro1-thumb.png" alt="Kiro" loading="lazy"><div class="name">Kiro</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/manjaro1-thumb.png" alt="Manjaro" loading="lazy"><div class="name">Manjaro</div></a>
+    <a class="distro" href="dotfiles.html#gallery"><img src="https://github.com/hyprtk/dotfiles/raw/main/assets/thumbnails/reborn1-thumb.png" alt="RebornOS" loading="lazy"><div class="name">RebornOS</div></a>
+  </div>
+  <p class="note">Not every Arch derivative is made equal — the installer is custom-tuned per distro. Everything lives in one <a href="https://github.com/hyprtk/dotfiles" target="_blank" rel="noopener">dotfiles</a> repo.</p>
+</section>
+
+<section class="wrap section" id="install">
+  <div class="section-head" style="max-width:640px;margin-left:auto;margin-right:auto;text-align:center;">
+    <h2>get <span class="mg">started</span></h2>
+    <p>Back up your existing <code class="mono" style="color:var(--cyan);font-size:0.85rem;">~/.config</code> before running the installer.</p>
+  </div>
+  <div class="install-box">
+    <p>dotfiles — clone &amp; run, distro auto-detected</p>
+    <code><span class="p">$</span> git clone <span class="arg">https://github.com/hyprtk/dotfiles.git ~/hyprtk</span> &amp;&amp; cd ~/hyprtk &amp;&amp; sh ./1-install.sh</code>
+  </div>
+  <div style="height:1rem"></div>
+  <div class="install-box">
+    <p>hyprtk-bar — standalone, any Hyprland</p>
+    <code><span class="p">$</span> git clone <span class="arg">https://github.com/hyprtk/hyprtk-bar.git</span> &amp;&amp; cd hyprtk-bar &amp;&amp; ./install.sh</code>
+  </div>
+  <div class="install-footer">the bar ships bundled with the dots too — no second step needed</div>
+</section>
+
+<section class="wrap section" id="repos">
+  <div class="section-head">
+    <h2>all <span class="cy">repositories</span></h2>
+    <p>Everything is open source. The core projects, plus the forks that power them.</p>
+  </div>
+  <div class="grid repo-grid">
+    <a class="repo" href="https://github.com/hyprtk/dotfiles" target="_blank" rel="noopener"><div class="rn mg">dotfiles</div><div class="rd">Unified installer for 11 distros</div></a>
+    <a class="repo" href="https://github.com/hyprtk/hyprtk-bar" target="_blank" rel="noopener"><div class="rn cy">hyprtk-bar</div><div class="rd">The pywal-themed taskbar</div></a>
+    <a class="repo" href="https://github.com/hyprtk/my-dots" target="_blank" rel="noopener"><div class="rn mg">my-dots</div><div class="rd">Personal build &amp; test dotfiles</div></a>
+    <a class="repo" href="https://github.com/hyprtk/pywal16" target="_blank" rel="noopener"><div class="rn mg">pywal16</div><div class="rd">16-colour pywal fork</div></a>
+    <a class="repo" href="https://github.com/hyprtk/papirus-folders" target="_blank" rel="noopener"><div class="rn mg">papirus-folders</div><div class="rd">Recolour Papirus folder icons</div></a>
+    <a class="repo" href="https://github.com/hyprtk/fonts" target="_blank" rel="noopener"><div class="rn mg">fonts</div><div class="rd">Bundled fonts for Hyprland</div></a>
+    <a class="repo" href="https://github.com/hyprtk/wallpaper" target="_blank" rel="noopener"><div class="rn mg">wallpaper</div><div class="rd">Wallpaper collection</div></a>
+    <a class="repo" href="https://github.com/hyprtk/hyprtk" target="_blank" rel="noopener"><div class="rn mg">hyprtk</div><div class="rd">Profile &amp; index</div></a>
+  </div>
+  <p class="note">The older standalone apps — <span class="mono">hyprtk-menu</span>, <span class="mono">hyprtk-arc-menu</span> and <span class="mono">theme-gui</span> — have been merged into hyprtk-bar and archived.</p>
+</section>
+
+<footer>
+  <div class="foot-links">
+    <a href="dotfiles.html">dotfiles</a>
+    <a href="bar.html">hyprtk-bar</a>
+    <a href="https://github.com/hyprtk/dotfiles" target="_blank" rel="noopener">github.com/hyprtk/dotfiles</a>
+    <a href="https://github.com/hyprtk/hyprtk-bar" target="_blank" rel="noopener">github.com/hyprtk/hyprtk-bar</a>
+  </div>
+  <div>hyprtk — gpl-2.0</div>
+</footer>
+
+</body>
+</html>
